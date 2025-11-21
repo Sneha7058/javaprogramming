@@ -1,0 +1,26 @@
+class Example10
+{
+	public static void main(String[]args)
+	{
+		String str = "sneha";
+		String str1 ="kolhe";
+		String str2 = "SNEHA";
+		String str3 = "SNEHA";
+		System.out.println(str.equals (str1));
+		System.out.println(str2.equals(str3));
+		System.out.println("String classes with new keyword");
+		String s  = new String("sneha");
+		String s1 = new String("kolhe");
+		String s2 = new String("SNEHA");
+		String s3 = new String("SNEHA");
+		System.out.println(s.equals (s1));
+		System.out.println(s2.equals(s3));
+		System.out.println("StringBuffer classes");
+		StringBuffer sb  =new StringBuffer("sneha");
+		StringBuffer sb1 =new StringBuffer("kolhe");
+		StringBuffer sb2 =new StringBuffer("SNEHA");		
+		StringBuffer sb3 =new StringBuffer(sb2);		
+		System.out.println(sb.equals (sb1));
+		System.out.println(sb2.equals(sb3));
+	}
+}

@@ -1,0 +1,14 @@
+class Example3
+{
+	public static void main(String[]args)
+	{
+		String str1 = new String("cyber");
+		String str2 = new String("sucess");
+		String str3 = new String("institue");
+		System.out.println(str1.concat("riteshs0r"));
+		System.out.println(str1);
+		System.out.println(str1==str2);
+		System.out.println(str2==str3);
+		System.out.println(str3==str1);
+	}		
+}

@@ -1,0 +1,9 @@
+class Example8
+{
+	public static void main(String[]args)
+	{
+      StringBuffer str=new StringBuffer("sneha");
+	  System.out.println(str);
+	  System.out.println(str.length());
+	}
+}

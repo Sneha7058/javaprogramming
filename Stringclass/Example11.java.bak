@@ -1,0 +1,17 @@
+class Example11
+{
+	StringBuffer(String str) 
+		{ 
+		str.reverse(); System.out.println(str);
+		}
+	public static void main(String[]args)
+	{
+		String str = "SNEHA";
+		//str.reverse();
+		System.out.println(str);
+		//String to StringBuffer
+		System.out.println("String to StringBuffer");
+		StringBuffer str1 = new StringBuffer(str);
+		
+	}
+}

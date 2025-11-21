@@ -1,0 +1,12 @@
+class Example15
+{
+	public static void main(String[]args)
+	{
+		System.out.println("Starting the index values 6");
+		String str = "Kolhe Sneha";
+		System.out.println(str.substring(6));
+		System.out.println("Starting the index values 0 to ending index values is 5");
+		System.out.println(str.substring(0,5));
+		
+	}
+}
