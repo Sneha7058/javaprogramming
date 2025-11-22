@@ -1,0 +1,117 @@
+
+SQL> SELECT * FROM EMP WHERE ENAME LIKE 'SMITH';
+
+     EMPNO ENAME      JOB              MGR HIREDATE      SALARY       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7369 SMITH      CLEARK          7902 17-DEC-80        800                    20
+
+SQL> SELECT * FROM EMP WHERE ENAME LIKE 'S%';
+
+     EMPNO ENAME      JOB              MGR HIREDATE      SALARY       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20
+      7369 SMITH      CLEARK          7902 17-DEC-80        800                    20
+
+SQL> SELECT * FROM EMP WHERE ENAME LIKE '%S%';
+
+     EMPNO ENAME      JOB              MGR HIREDATE      SALARY       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20
+      7369 SMITH      CLEARK          7902 17-DEC-80        800                    20
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30
+      8765 OSCAR      CLERK           7782 20-FEB-83       1350                    10
+
+6 rows selected.
+
+SQL> SELECT * FROM EMP WHERE ENAME LIKE '__A';
+
+no rows selected
+
+SQL> SELECT * FROM EMP WHERE ENAME LIKE '_AS%';
+
+no rows selected
+
+SQL> SELECT * FROM EMP WHERE ENAME LIKE '%A%A%';
+
+     EMPNO ENAME      JOB              MGR HIREDATE      SALARY       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20
+
+SQL> SELECT * FROM EMP WHERE ENAME LIKE 'M%N';
+
+     EMPNO ENAME      JOB              MGR HIREDATE      SALARY       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30
+      7840 MADDEN     SALESMAN        7698 17-OCT-81     1633.5       1500         30
+
+SQL> SELECT * FROM EMP WHERE ENAME LIKE '%50';
+
+no rows selected
+
+SQL> SELECT * FROM EMP WHERE ENAME LIKE '%50%';
+
+no rows selected
+
+SQL> SELECT * FROM EMP WHERE SALARY LIKE '%50';
+
+     EMPNO ENAME      JOB              MGR HIREDATE      SALARY       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30
+      8765 OSCAR      CLERK           7782 20-FEB-83       1350                    10
+
+6 rows selected.
+SQL> SELECT MAX(SALARY) FROM EMP;
+
+MAX(SALARY)
+-----------
+     5512.5
+
+SQL> SELECT MAX(SALARY) FROM EMP WHERE JOB='MANAGER';
+
+MAX(SALARY)
+-----------
+       2975
+
+SQL> SELECT COUNT(SALARY)FROM EMP WHERE SALARY='3000'AND DEPTNO='20';
+
+COUNT(SALARY)
+-------------
+            3
+
+SQL> SELECT SUM(SALARY)FROM EMP WHERE DEPTNO IN(10,30);
+
+SUM(SALARY)
+-----------
+    21133.5
+
+SQL> SELECT COUNT(*) FROM EMP WHERE ENAME LIKE '%E%';
+
+  COUNT(*)
+----------
+         7
+
+SQL> SELECT MIN(SALARY) FROM EMP WHERE JOB='CLEARK' AND DEPTNO IN(10,20);
+
+MIN(SALARY)
+-----------
+        800
+
+SQL> SELECT COUNT(*) FROM EMP WHERE COMM IS NOT NULL;
+
+  COUNT(*)
+----------
+         5
+
+SQL> SELECT MAX(SALARY) FROM EMP WHERE JOB='MANAGER'AND DEPTNO='20';
+
+MAX(SALARY)
+-----------
+       2975
+
+SQL>
